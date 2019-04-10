@@ -3,7 +3,7 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.html -f
 RewriteRule ^(.*)$ $1.html
 
-ErrorDocument 404 http://www.thecapriciouscook.tk/notfound
+ErrorDocument 404 https://ddalwadi38.github.io/Food/notfound
 
 
 Options -Indexes
