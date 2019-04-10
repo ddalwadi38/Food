@@ -14,7 +14,7 @@
 		<!-- meta character set -->
 		<meta charset="UTF-8">
 		<!-- Site Title -->
-		<title>Macro</title>
+		<title>The Capricious Cook</title>
 
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
 			<!--
@@ -30,7 +30,7 @@
 			<link rel="stylesheet" href="css/owl.carousel.css">				
 			<link rel="stylesheet" href="css/main.css">
 		</head>
-		<body>	
+		<body onload="listcall()">	
 			<header id="header">
 				<div class="header-top">
 					<div class="container">
@@ -80,84 +80,536 @@
 							</div>
 						</div>
 					</div>	
-
+					<!-- &#x1F95A; -->
                     <ul class="filter-wrap filters col-lg-12 no-padding">
-                        <li class="active" data-filter="*">All Menu</li>
-                        <li data-filter=".breakfast">Breakfast</li>
-                        <li data-filter=".lunch">Lunch</li>
-                        <li data-filter=".dinner">Dinner</li>
-                        <li data-filter=".budget-meal">Budget Meal</li>
-                        <li data-filter=".buffet">Buffet</li>
+                        <li data-filter=".ccupcakes" id="ccakes">Cakes & Cupcakes</li>
+                        <li data-filter=".cheesecakes">Luscious Cheesecakes</li>
+                        <li data-filter=".cookies">Cookies(Both Sweet & Savoury)</li>
+                        <li data-filter=".cakepops">Cake Pops</li>
+						<li data-filter=".doughnuts">Doughnuts</li>
+						<li data-filter=".macarons">Macarons &#x1F95A;</li>
                     </ul>
                     
                     <div class="filters-content">
                         <div class="row grid">
-                            <div class="col-md-6 all breakfast">
+
+							<!--Start Cupcakes And Cakes-->
+                            <div class="col-md-4 all ccupcakes">
 								<div class="single-menu">
 									<div class="title-wrap d-flex justify-content-between">
-										<h4>Cappuccion</h4>
-										<h4 class="price">$49</h4>
-									</div>			
-									<p>
-										Usage of the Internet is becoming more common due to rapid advance.
-									</p>									
+										<h4>Classic Vanilla</h4>
+										<h4 class="price">&#x20B9;500/kg</h4>
+									</div>												
 								</div>					                               
-                            </div>                           
-                            <div class="col-md-6 all dinner">
+							</div> 
+							<div class="col-md-4 all ccupcakes">
 								<div class="single-menu">
 									<div class="title-wrap d-flex justify-content-between">
-										<h4>Americano</h4>
-										<h4 class="price">$49</h4>
-									</div>			
-									<p>
-										Usage of the Internet is becoming more common due to rapid advance.
-									</p>									
-								</div>
-                            </div>
-                            <div class="col-md-6 all budget-meal">
-								<div class="single-menu">
-									<div class="title-wrap d-flex justify-content-between">
-										<h4>Macchiato</h4>
-										<h4 class="price">$49</h4>
-									</div>			
-									<p>
-										Usage of the Internet is becoming more common due to rapid advance.
-									</p>									
-								</div>
-                            </div>
-                            <div class="col-md-6 all breakfast">
-								<div class="single-menu">
-									<div class="title-wrap d-flex justify-content-between">
-										<h4>Mocha</h4>
-										<h4 class="price">$49</h4>
-									</div>
-									<p>
-										Usage of the Internet is becoming more common due to rapid advance.
-									</p>									
-								</div>
-                            </div>
-                            <div class="col-md-6 all lunch">
-								<div class="single-menu">
-									<div class="title-wrap d-flex justify-content-between">
-										<h4>Piccolo Latte</h4>
-										<h4 class="price">$49</h4>
-									</div>
-									<p>
-										Usage of the Internet is becoming more common due to rapid advance.
-									</p>									
-								</div>
-                            </div>
-                            <div class="col-md-6 all buffet">
-								<div class="single-menu">
-									<div class="title-wrap d-flex justify-content-between">
-										<h4>Ristretto</h4>
-										<h4 class="price">$49</h4>
-									</div>
-									<p>
-										Usage of the Internet is becoming more common due to rapid advance.
-									</p>									
-								</div>
-                            </div>                            
+										<h4>Decadent Chocolate</h4>
+										<h4 class="price">&#x20B9;600/kg</h4>
+									</div>												
+								</div>					                               
+							</div> 
+							<div class="col-md-4 all ccupcakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Chocolate Chip</h4>
+											<h4 class="price">&#x20B9;600/kg</h4>
+										</div>												
+									</div>					                               
+							</div>
+							<div class="col-md-4 all ccupcakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Orange</h4>
+											<h4 class="price">&#x20B9;600/kg</h4>
+										</div>												
+									</div>					                               
+							</div> 
+							<div class="col-md-4 all ccupcakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Mango</h4>
+											<h4 class="price">&#x20B9;600/kg</h4>
+										</div>												
+									</div>					                               
+							</div> 
+							<div class="col-md-4 all ccupcakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Lemon</h4>
+											<h4 class="price">&#x20B9;600/kg</h4>
+										</div>												
+									</div>					                               
+							</div> 
+							<div class="col-md-4 all ccupcakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Blueberry</h4>
+											<h4 class="price">&#x20B9;650/kg</h4>
+										</div>												
+									</div>					                               
+							</div> 
+							<div class="col-md-4 all ccupcakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Strawberry</h4>
+											<h4 class="price">&#x20B9;650/kg</h4>
+										</div>												
+									</div>					                               
+							</div> 
+							<div class="col-md-4 all ccupcakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Rose</h4>
+											<h4 class="price">&#x20B9;650/kg</h4>
+										</div>												
+									</div>					                               
+							</div>    
+							<div class="col-md-4 all ccupcakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Mint</h4>
+											<h4 class="price">&#x20B9;650/kg</h4>
+										</div>												
+									</div>					                               
+							</div>  
+							<div class="col-md-4 all ccupcakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Mint And Chocolate</h4>
+											<h4 class="price">&#x20B9;700/kg</h4>
+										</div>												
+									</div>					                               
+							</div> 
+							<div class="col-md-4 all ccupcakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Rose And Coconut</h4>
+											<h4 class="price">&#x20B9;700/kg</h4>
+										</div>												
+									</div>					                               
+							</div>       
+							<div class="col-md-4 all ccupcakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Coconut</h4>
+											<h4 class="price">&#x20B9;700/kg</h4>
+										</div>												
+									</div>					                               
+							</div>  
+							<div class="col-md-4 all ccupcakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Coffee Brew</h4>
+											<h4 class="price">&#x20B9;700/kg</h4>
+										</div>												
+									</div>					                               
+							</div>  
+							<div class="col-md-4 all ccupcakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Butterscotch</h4>
+											<h4 class="price">&#x20B9;700/kg</h4>
+										</div>												
+									</div>					                               
+							</div>   
+							<div class="col-md-4 all ccupcakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Chocolate And Coconut</h4>
+											<h4 class="price">&#x20B9;700/kg</h4>
+										</div>												
+									</div>					                               
+							</div>         
+							<div class="col-md-4 all ccupcakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Oreo</h4>
+											<h4 class="price">&#x20B9;700/kg</h4>
+										</div>												
+									</div>					                               
+							</div> 
+							<div class="col-md-4 all ccupcakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Marble</h4>
+											<h4 class="price">&#x20B9;700/kg</h4>
+										</div>												
+									</div>					                               
+							</div>  
+							<div class="col-md-4 all ccupcakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Black Forest</h4>
+											<h4 class="price">&#x20B9;750/kg</h4>
+										</div>												
+									</div>					                               
+							</div>   
+							<div class="col-md-4 all ccupcakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>White Forest</h4>
+											<h4 class="price">&#x20B9;750/kg</h4>
+										</div>												
+									</div>					                               
+							</div> 
+							<div class="col-md-4 all ccupcakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Snikers/Mars/Bounty</h4>
+											<h4 class="price">&#x20B9;800/kg</h4>
+										</div>												
+									</div>					                               
+							</div>  
+							<div class="col-md-4 all ccupcakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Dry Fruit Carnival</h4>
+											<h4 class="price">&#x20B9;800/kg</h4>
+										</div>												
+									</div>					                               
+							</div> 
+							<div class="col-md-4 all ccupcakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Carrots And Walnuts</h4>
+											<h4 class="price">&#x20B9;800/kg</h4>
+										</div>												
+									</div>					                               
+							</div>     
+							<div class="col-md-4 all ccupcakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Saffron</h4>
+											<h4 class="price">&#x20B9;900/kg</h4>
+										</div>												
+									</div>					                               
+							</div>     
+							<div class="col-md-4 all ccupcakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Neapolitan</h4>
+											<h4 class="price">&#x20B9;900/kg</h4>
+										</div>												
+									</div>					                               
+							</div> 
+							<!--End CupCakes And Cakes-->
+
+							<!--Start Cheese Cakes-->
+							<div class="col-md-4 all cheesecakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Classic Newyork&#x1F95A;</h4>
+											<h4 class="price">&#x20B9;700/kg</h4>
+										</div>												
+									</div>					                               
+							</div> 
+							<div class="col-md-4 all cheesecakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Confetti</h4>
+											<h4 class="price">&#x20B9;700/kg</h4>
+										</div>												
+									</div>					                               
+							</div> 
+							<div class="col-md-4 all cheesecakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Strawberry</h4>
+											<h4 class="price">&#x20B9;750/kg</h4>
+										</div>												
+									</div>					                               
+							</div> 
+							<div class="col-md-4 all cheesecakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Mango</h4>
+											<h4 class="price">&#x20B9;750/kg</h4>
+										</div>												
+									</div>					                               
+							</div>  
+							<div class="col-md-4 all cheesecakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Orange</h4>
+											<h4 class="price">&#x20B9;750/kg</h4>
+										</div>												
+									</div>					                               
+							</div> 
+							<div class="col-md-4 all cheesecakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Lemon</h4>
+											<h4 class="price">&#x20B9;750/kg</h4>
+										</div>												
+									</div>					                               
+							</div> 
+							<div class="col-md-4 all cheesecakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Blueberry</h4>
+											<h4 class="price">&#x20B9;750/kg</h4>
+										</div>												
+									</div>					                               
+							</div>
+							<div class="col-md-4 all cheesecakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Butterscotch</h4>
+											<h4 class="price">&#x20B9;750/kg</h4>
+										</div>												
+									</div>					                               
+							</div>
+							<div class="col-md-4 all cheesecakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Chocolate Chip</h4>
+											<h4 class="price">&#x20B9;750/kg</h4>
+										</div>												
+									</div>					                               
+							</div>   
+							<div class="col-md-4 all cheesecakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Coconut</h4>
+											<h4 class="price">&#x20B9;800/kg</h4>
+										</div>												
+									</div>					                               
+							</div> 
+							<div class="col-md-4 all cheesecakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Decadent Chocolate</h4>
+											<h4 class="price">&#x20B9;800/kg</h4>
+										</div>												
+									</div>					                               
+							</div> 
+							<div class="col-md-4 all cheesecakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Coffee</h4>
+											<h4 class="price">&#x20B9;800/kg</h4>
+										</div>												
+									</div>					                               
+							</div> 
+							<div class="col-md-4 all cheesecakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Oreo</h4>
+											<h4 class="price">&#x20B9;800/kg</h4>
+										</div>												
+									</div>					                               
+							</div> 
+							<div class="col-md-4 all cheesecakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Caramel</h4>
+											<h4 class="price">&#x20B9;800/kg</h4>
+										</div>												
+									</div>					                               
+							</div> 
+							<div class="col-md-4 all cheesecakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Dulce deLech</h4>
+											<h4 class="price">&#x20B9;800/kg</h4>
+										</div>												
+									</div>					                               
+							</div> 
+							<div class="col-md-4 all cheesecakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Nutella</h4>
+											<h4 class="price">&#x20B9;800/kg</h4>
+										</div>												
+									</div>					                               
+							</div> 
+							<div class="col-md-4 all cheesecakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Peanut Butter</h4>
+											<h4 class="price">&#x20B9;800/kg</h4>
+										</div>												
+									</div>					                               
+							</div> 
+							<div class="col-md-4 all cheesecakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Rose</h4>
+											<h4 class="price">&#x20B9;800/kg</h4>
+										</div>												
+									</div>					                               
+							</div> 
+							<div class="col-md-4 all cheesecakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Double Chocolate Chip</h4>
+											<h4 class="price">&#x20B9;850/kg</h4>
+										</div>												
+									</div>					                               
+							</div> 
+							<div class="col-md-4 all cheesecakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Chocolate And Peanut Butter</h4>
+											<h4 class="price">&#x20B9;850/kg</h4>
+										</div>												
+									</div>					                               
+							</div> 
+							<div class="col-md-4 all cheesecakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Honey And Vanilla</h4>
+											<h4 class="price">&#x20B9;850/kg</h4>
+										</div>												
+									</div>					                               
+							</div>
+							<div class="col-md-4 all cheesecakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Mint And Chocolate Chip</h4>
+											<h4 class="price">&#x20B9;850/kg</h4>
+										</div>												
+									</div>					                               
+							</div> 
+							<div class="col-md-4 all cheesecakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Banoffee</h4>
+											<h4 class="price">&#x20B9;850/kg</h4>
+										</div>												
+									</div>					                               
+							</div>
+							<div class="col-md-4 all cheesecakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Rose And Coconut</h4>
+											<h4 class="price">&#x20B9;850/kg</h4>
+										</div>												
+									</div>					                               
+							</div> 
+							<div class="col-md-4 all cheesecakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Japanese Cotton Cheesecake&#x1F95A;</h4>
+											<h4 class="price">&#x20B9;850/kg</h4>
+										</div>												
+									</div>					                               
+							</div> 
+							<div class="col-md-4 all cheesecakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Cookie Dough Cheesecake</h4>
+											<h4 class="price">&#x20B9;850/kg</h4>
+										</div>												
+									</div>					                               
+							</div>
+							<div class="col-md-4 all cheesecakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Snickers/Bounty/Mars</h4>
+											<h4 class="price">&#x20B9;850/kg</h4>
+										</div>												
+									</div>					                               
+							</div>
+							<div class="col-md-4 all cheesecakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Banana And Wallnut</h4>
+											<h4 class="price">&#x20B9;900/kg</h4>
+										</div>												
+									</div>					                               
+							</div>
+							<div class="col-md-4 all cheesecakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Almond</h4>
+											<h4 class="price">&#x20B9;900/kg</h4>
+										</div>												
+									</div>					                               
+							</div>
+							<div class="col-md-4 all cheesecakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Marble</h4>
+											<h4 class="price">&#x20B9;900/kg</h4>
+										</div>												
+									</div>					                               
+							</div>
+							<div class="col-md-4 all cheesecakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Pistachio</h4>
+											<h4 class="price">&#x20B9;900/kg</h4>
+										</div>												
+									</div>					                               
+							</div>
+							<div class="col-md-4 all cheesecakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Carrot And Wallnut</h4>
+											<h4 class="price">&#x20B9;900/kg</h4>
+										</div>												
+									</div>					                               
+							</div>
+							<div class="col-md-4 all cheesecakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Neapolitan</h4>
+											<h4 class="price">&#x20B9;900/kg</h4>
+										</div>												
+									</div>					                               
+							</div>
+							<div class="col-md-4 all cheesecakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Chocos/Honeyloops</h4>
+											<h4 class="price">&#x20B9;900/kg</h4>
+										</div>												
+									</div>					                               
+							</div>
+							<div class="col-md-4 all cheesecakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Make Your Own Flavour</h4>
+											<h4 class="price">&#x20B9;900/kg</h4>
+										</div>												
+									</div>					                               
+							</div>
+							<div class="col-md-4 all cheesecakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Gulab Jamun Cheesecake</h4>
+											<h4 class="price">&#x20B9;1000/kg</h4>
+										</div>												
+									</div>					                               
+							</div>
+							<div class="col-md-4 all cheesecakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Bundi Cheesecake</h4>
+											<h4 class="price">&#x20B9;1000/kg</h4>
+										</div>												
+									</div>					                               
+							</div>
+							<div class="col-md-4 all cheesecakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Gajar Ka Halwa Cheesecake</h4>
+											<h4 class="price">&#x20B9;1000/kg</h4>
+										</div>												
+									</div>					                               
+							</div>
+							<div class="col-md-4 all cheesecakes">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Rasmalai Cheesecake</h4>
+											<h4 class="price">&#x20B9;1000/kg</h4>
+										</div>												
+									</div>					                               
+							</div>
+							<!--End Cheesecakes-->
                         </div>
                     </div>
                     
@@ -216,5 +668,10 @@
             <script src="js/isotope.pkgd.min.js"></script>								
 			<script src="js/mail-script.js"></script>	
 			<script src="js/main.js"></script>	
+			<script>
+				function listcall(){
+					document.getElementById('ccakes').click();
+				}
+			</script>
 		</body>
 	</html>
