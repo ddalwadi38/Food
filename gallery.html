@@ -39,10 +39,52 @@
 					 text-align: center;
  					 padding: 10px 20px;
 				}
-
+				.crunchify-top:hover {
+						color: #fff !important;
+						background-color: black;
+						text-decoration: none;
+					}
+					 
+					.crunchify-top {
+						display: none;
+						position: fixed;
+						bottom: 1rem;
+						right: 1rem;
+						width: 3.2rem;
+						height: 3.2rem;
+						line-height: 3.2rem;
+						font-size: 1.4rem;
+						color: #fff;
+						background-color: rgba(0,0,0,0.3);
+						text-decoration: none;
+						border-radius: 3.2rem;
+						text-align: center;
+						cursor: pointer;
+					}
 			</style>
+			<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+			<script>            
+						jQuery(document).ready(function() {
+							var offset = 220;
+							var duration = 500;
+							jQuery(window).scroll(function() {
+								if (jQuery(this).scrollTop() > offset) {
+									jQuery('.crunchify-top').fadeIn(duration);
+								} else {
+									jQuery('.crunchify-top').fadeOut(duration);
+								}
+							});
+					 
+							jQuery('.crunchify-top').click(function(event) {
+								event.preventDefault();
+								jQuery('html, body').animate({scrollTop: 0}, duration);
+								return false;
+							})
+						});
+			</script>
 		</head>
-		<body onload="listcall()">	
+		<body onload="listcall()">
+			<a href="#" class="crunchify-top">↑</a>		
 			<header id="header">
 				<div class="header-top">
 					<div class="container">
@@ -412,5 +454,6 @@
 					document.getElementById('ccakes').click();
 				}
 			</script>	
+			
 		</body>
 	</html>
