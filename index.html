@@ -30,52 +30,6 @@
 			<link rel="stylesheet" href="css/animate.min.css">
 			<link rel="stylesheet" href="css/owl.carousel.css">				
 			<link rel="stylesheet" href="css/main.css">
-		  <style>
-					.crunchify-top:hover {
-						color: #fff !important;
-						background-color: black;
-						text-decoration: none;
-					}
-					 
-					.crunchify-top {
-						display: none;
-						position: fixed;
-						bottom: 1rem;
-						right: 1rem;
-						width: 3.2rem;
-						height: 3.2rem;
-						line-height: 3.2rem;
-						font-size: 1.4rem;
-						color: #fff;
-						background-color: rgba(0,0,0,0.3);
-						text-decoration: none;
-						border-radius: 3.2rem;
-						text-align: center;
-						cursor: pointer;
-					}
-			</style>
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-			<script>            
-						jQuery(document).ready(function() {
-							var offset = 220;
-							var duration = 500;
-							jQuery(window).scroll(function() {
-								if (jQuery(this).scrollTop() > offset) {
-									jQuery('.crunchify-top').fadeIn(duration);
-								} else {
-									jQuery('.crunchify-top').fadeOut(duration);
-								}
-							});
-					 
-							jQuery('.crunchify-top').click(function(event) {
-								event.preventDefault();
-								jQuery('html, body').animate({scrollTop: 0}, duration);
-								return false;
-							})
-						});
-			</script>
 		</head>
 		
 		<body>	
@@ -190,15 +144,13 @@
 									</div>		
 							</div>
 						</div>
-					</div>	
-					<a href="#" class="crunchify-top">↑</a>					
+					</div>						
 				</footer>
 			<!-- End footer Area -->	
 
 			<script src="js/vendor/jquery-2.2.4.min.js"></script>
 			<script src="js/popper.min.js"></script>
-			<script src="js/vendor/bootstrap.min.js"></script>			
-			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>		
+			<script src="js/vendor/bootstrap.min.js"></script>				
  			<script src="js/jquery-ui.js"></script>					
   		<script src="js/easing.min.js"></script>			
 			<script src="js/hoverIntent.js"></script>
