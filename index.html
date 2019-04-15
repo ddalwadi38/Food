@@ -30,9 +30,31 @@
 			<link rel="stylesheet" href="css/animate.min.css">
 			<link rel="stylesheet" href="css/owl.carousel.css">				
 			<link rel="stylesheet" href="css/main.css">
+			<style>
+					.coupon {
+						border: 5px rgb(10, 10, 10);
+						width: 80%;
+						border-radius: 15px;
+						margin: 0 auto;
+					}
+					
+					.contain {
+						padding: 2px 16px;
+						background-color:white;
+					}
+					
+					.promo {
+						background:white;
+						padding: 3px;
+					}
+					
+					.expire {
+						color: red;
+					}
+					</style>
 		</head>
 		
-		<body>	
+		<body onload="newcall()"> 	
 			<header id="header">
 				<div class="header-top">
 					<div class="container">
@@ -58,7 +80,6 @@
 				</div>
 			</header><!-- #header -->
 
-
 			<!-- start banner Area -->
 			<section class="banner-area" >	
 				<div class="container" style="text-align:center;">
@@ -74,7 +95,34 @@
 				</div>					
 			</section>
 			<!-- End banner Area -->
-			
+			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong" id="advertisment" hidden>
+					Launch demo modal
+			</button>
+			<!--Start Offer-->
+			<div class="modal fade" id="exampleModalLong" style="text-align:center;">
+					<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-body">
+							<div class="coupon">
+								<div class="contain">
+										<h3>The Capricious Cook</h3>
+								</div>
+								<img src="food_gallery/Chocolate cupcakes with Coffee Buttercream.jpg" alt="" style="width:100%;">
+								<div class="contain" style="background-color:white">
+								<h2><b>Welcome Offers!!</b></h2> 
+								<h5>Get <b>2 mini doughnuts</b> free on order of Rs.900/- or above</h5>
+								<h5>Get <b>2 cupcakes</b> free on order of Rs.1000/- or more</h5>
+								</div>
+								<div class="contain">
+								<p class="expire">Expires: June 01, 2019</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					</div>
+			</div>
+			<!--End Offer-->
 			<!-- Start home-about Area -->
 			<section class="home-about-area section-gap">
 					<div class="container">
@@ -144,7 +192,8 @@
 									</div>		
 							</div>
 						</div>
-					</div>						
+					</div>	
+					
 				</footer>
 			<!-- End footer Area -->	
 
@@ -162,5 +211,13 @@
       <script src="js/isotope.pkgd.min.js"></script>								
 			<script src="js/mail-script.js"></script>	
 			<script src="js/main.js"></script>	
+			<script>
+					function newcall(){
+						 if(sessionStorage.getItem('skey')!=='thecapriciouscook'){
+							 document.getElementById('advertisment').click();
+							 sessionStorage.setItem('skey','thecapriciouscook');
+						 }
+					 }
+			</script>
 		</body>
 	</html>
