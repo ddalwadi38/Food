@@ -225,9 +225,20 @@
 			<script src="js/main.js"></script>	
 			<script>
 					function newcall(){
+						var d = new Date();
+						var expiry_date = d.getDate();
+						var expiry_month = d.getMonth()+1;
+						var expiry_year = d.getFullYear();
 						 if(sessionStorage.getItem('skey')!=='thecapriciouscook'){
-							 document.getElementById('advertisment').click();
-							 sessionStorage.setItem('skey','thecapriciouscook');
+							 if(expiry_date>1 && expiry_month>=6 && expiry_year>=2019){
+							 	//sessionStorage.setItem('skey','thecapriciouscook');
+								 console.log("Welcome Offer Expired!!");
+							 }
+							 else
+							 {
+								document.getElementById('advertisment').click();
+								sessionStorage.setItem('skey','thecapriciouscook');
+							 }
 						 }
 					 }
 			</script>
