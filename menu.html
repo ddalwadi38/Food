@@ -145,11 +145,12 @@
 						<a id="previous" onclick="previousItem();" style="cursor:pointer">◀</a>
                         <li data-filter=".ccupcakes" id="list1">Cakes & Cupcakes</li>
                         <li data-filter=".cheesecakes" id="list2" style="display:none">Cheesecakes</li>
-                        <li data-filter=".cookies" id="list3" style="display:none">Cookies </li>
-                        <li data-filter=".cakepops" id="list4" style="display:none">Cake Pops</li>
-						<li data-filter=".doughnuts" id="list5" style="display:none">Doughnuts</li>
-						<li data-filter=".macarons" id="list6" style="display:none">Macarons &#x1F95A;</li>
-						<li data-filter=".special" id="list7" style="display:none">The Capricious Cook Specials</li>
+						<li data-filter=".cookies" id="list3" style="display:none">Cookies </li>
+						<li data-filter=".nocookies" id="list4" style="display:none">No Sugar Cookies </li>
+                        <li data-filter=".cakepops" id="list5" style="display:none">Cake Pops</li>
+						<li data-filter=".doughnuts" id="list6" style="display:none">Doughnuts</li>
+						<li data-filter=".macarons" id="list7" style="display:none">Macarons &#x1F95A;</li>
+						<li data-filter=".special" id="list8" style="display:none">The Capricious Cook Specials</li>
 						<a id="next" onclick="nextItem();" style="cursor:pointer">▶</a>
                     </ul>
                     
@@ -1108,7 +1109,43 @@
 										</div>												
 									</div>					                               
 							</div>
-							<div class="col-md-4 all cookies">
+							
+							<!--End Cookies-->
+
+							<!--Start No Sugar Cookies-->
+							<div class="col-md-4 all nocookies">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Crownies(Cookie + Brownie Swirls)</h4>
+											<h4 class="price">&#x20B9;350/kg</h4>
+										</div>												
+									</div>					                               
+							</div>
+							<div class="col-md-4 all nocookies">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Jaggery Whole Wheat Coconut Cookies</h4>
+											<h4 class="price">&#x20B9;600/kg</h4>
+										</div>												
+									</div>					                               
+							</div>
+							<div class="col-md-4 all nocookies">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Jaggery Whole Wheat Sesame Cookies </h4>
+											<h4 class="price">&#x20B9;600/kg</h4>
+										</div>												
+									</div>					                               
+							</div>
+							<div class="col-md-4 all nocookies">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Wholewheat Jaggery Cookies</h4>
+											<h4 class="price">&#x20B9;650/kg</h4>
+										</div>												
+									</div>					                               
+							</div>
+							<div class="col-md-4 all nocookies">
 									<div class="single-menu">
 										<div class="title-wrap d-flex justify-content-between">
 											<h4>Jaggery Oatmeal Cookies</h4>
@@ -1116,16 +1153,8 @@
 										</div>												
 									</div>					                               
 							</div>
-							<div class="col-md-4 all cookies">
-									<div class="single-menu">
-										<div class="title-wrap d-flex justify-content-between">
-											<h4>Wholewheat Jaggery Cookies</h4>
-											<h4 class="price">&#x20B9;700/kg</h4>
-										</div>												
-									</div>					                               
-							</div>
-							<!--End Cookies-->
-
+							
+							<!--End No Sugar Cookies-->
 							<!--Start Cake Pops-->
 							<div class="col-md-4 all cakepops">
 									<div class="single-menu">
@@ -1639,7 +1668,7 @@
 				var start = 1;
 				var itemname = "";
 				var initial =document.getElementById('list1').innerHTML;
-				var last = document.getElementById('list7').innerHTML;
+				var last = document.getElementById('list8').innerHTML;
 					function previousItem(){
 						start = start - 1;
 						if(start <= 1){
@@ -1658,10 +1687,10 @@
 
 					function nextItem(){
 						start = start + 1;
-						if(start >= 7){
+						if(start >= 8){
 							document.getElementById('list1').innerHTML= last;
-							document.getElementById('list7').click();
-							start = 7;
+							document.getElementById('list8').click();
+							start = 8;
 						}
 						else
 						{
