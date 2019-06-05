@@ -140,13 +140,17 @@
 						</div>
 					</div>	
 					<!-- &#x1F95A; -->
-                    <ul class="filter-wrap filters col-lg-12 no-padding">
-                        <li data-filter=".ccupcakes" id="ccakes">Cakes & Cupcakes</li>
-                        <li data-filter=".cheesecakes">Cheesecakes</li>
-                        <li data-filter=".cookies">Cookies </li>
-                        <li data-filter=".cakepops">Cake Pops</li>
-						<li data-filter=".doughnuts">Doughnuts</li>
-						<li data-filter=".macarons">Macarons &#x1F95A;</li>
+					
+                    <ul class="filter-wrap filters col-md-12 no-padding">
+						<a id="previous" onclick="previousItem();" style="cursor:pointer">◀</a>
+                        <li data-filter=".ccupcakes" id="list1">Cakes & Cupcakes</li>
+                        <li data-filter=".cheesecakes" id="list2" style="display:none">Cheesecakes</li>
+                        <li data-filter=".cookies" id="list3" style="display:none">Cookies </li>
+                        <li data-filter=".cakepops" id="list4" style="display:none">Cake Pops</li>
+						<li data-filter=".doughnuts" id="list5" style="display:none">Doughnuts</li>
+						<li data-filter=".macarons" id="list6" style="display:none">Macarons &#x1F95A;</li>
+						<li data-filter=".special" id="list7" style="display:none">The Capricious Cook Specials</li>
+						<a id="next" onclick="nextItem();" style="cursor:pointer">▶</a>
                     </ul>
                     
                     <div class="filters-content">
@@ -1494,6 +1498,90 @@
 									</div>					                               
 							</div>
 							<!--End Macarons-->
+
+							<!--Start Capricious Cook Special-->
+							<div class="col-md-4 all special">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Decadent Chocolate Brownies</h4>
+											<h4 class="price">&#x20B9;40/pc</h4>
+										</div>												
+									</div>					                               
+							</div>
+							<div class="col-md-4 all special">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Chocolate Chip Brownies</h4>
+											<h4 class="price">&#x20B9;50/pc</h4>
+										</div>												
+									</div>					                               
+							</div>
+							<div class="col-md-4 all special">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Zebra Brownies</h4>
+											<h4 class="price">&#x20B9;60/pc</h4>
+										</div>												
+									</div>					                               
+							</div>
+							<div class="col-md-4 all special">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Plain Blondies</h4>
+											<h4 class="price">&#x20B9;60/pc</h4>
+										</div>												
+									</div>					                               
+							</div>
+							<div class="col-md-4 all special">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Butterscotch Blondies</h4>
+											<h4 class="price">&#x20B9;65/pc</h4>
+										</div>												
+									</div>					                               
+							</div>
+							<div class="col-md-4 all special">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Lemon Brownies</h4>
+											<h4 class="price">&#x20B9;65/pc</h4>
+										</div>												
+									</div>					                               
+							</div>
+							<div class="col-md-4 all special">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Lemon Bars</h4>
+											<h4 class="price">&#x20B9;65/pc</h4>
+										</div>												
+									</div>					                               
+							</div>
+							<div class="col-md-4 all special">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Blood Orange Bars</h4>
+											<h4 class="price">&#x20B9;65/pc</h4>
+										</div>												
+									</div>					                               
+							</div>
+							<div class="col-md-4 all special">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Nutty Blondies </h4>
+											<h4 class="price">&#x20B9;70/pc</h4>
+										</div>												
+									</div>					                               
+							</div>
+							<div class="col-md-4 all special">
+									<div class="single-menu">
+										<div class="title-wrap d-flex justify-content-between">
+											<h4>Baklava </h4>
+											<h4 class="price">&#x20B9;1000/kg</h4>
+										</div>												
+									</div>					                               
+							</div>
+							
+							<!--End Capricious Cook Special-->
                         </div>
                     </div>
                     
@@ -1548,9 +1636,47 @@
 			<script src="js/mail-script.js"></script>	
 			<script src="js/main.js"></script>	
 			<script>
+				var start = 1;
+				var itemname = "";
+				var initial =document.getElementById('list1').innerHTML;
+				var last = document.getElementById('list7').innerHTML;
+					function previousItem(){
+						start = start - 1;
+						if(start <= 1){
+								document.getElementById('list1').innerHTML= initial;
+								document.getElementById('list1').click();
+								start = 1;
+						}
+						else{
+							itemname = document.getElementById('list'+start).innerHTML;
+							document.getElementById('list1').innerHTML= itemname;
+							document.getElementById('list'+ start).click();
+							document.getElementById('list1').style.backgroundColor = "#f42f2c";
+							document.getElementById('list1').style.color = "#fff";
+						}
+					}
+
+					function nextItem(){
+						start = start + 1;
+						if(start >= 7){
+							document.getElementById('list1').innerHTML= last;
+							document.getElementById('list7').click();
+							start = 7;
+						}
+						else
+						{
+							itemname = document.getElementById('list'+start).innerHTML;
+							document.getElementById('list1').innerHTML= itemname;
+							document.getElementById('list'+ start).click();
+							document.getElementById('list1').style.backgroundColor = "#f42f2c";
+							document.getElementById('list1').style.color = "#fff";
+
+						}
+					}
 				function listcall(){
-					document.getElementById('ccakes').click();
+					document.getElementById('list1').click();
 				}
 			</script>
+			
 		</body>
 	</html>

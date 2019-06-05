@@ -148,12 +148,15 @@
 					</div>	
                     
                     <ul class="filter-wrap filters col-lg-12 no-padding">
-											<li data-filter=".ccupcakes" id="ccakes">Cakes & Cupcakes</li>
-											<li data-filter=".cheesecakes">Cheesecakes</li>
-											<li data-filter=".cookies">Cookies </li>
-											<li data-filter=".cakepops">Cake Pops</li>
-											<li data-filter=".doughnuts">Doughnuts</li>
-											<li data-filter=".macarons">Macarons &#x1F95A;</li>
+												<a id="previous" onclick="previousItem();" style="cursor:pointer">◀</a>
+                        <li data-filter=".ccupcakes" id="list1">Cakes & Cupcakes</li>
+                        <li data-filter=".cheesecakes" id="list2" style="display:none">Cheesecakes</li>
+                        <li data-filter=".cookies" id="list3" style="display:none">Cookies </li>
+                        <li data-filter=".cakepops" id="list4" style="display:none">Cake Pops</li>
+												<li data-filter=".doughnuts" id="list5" style="display:none">Doughnuts</li>
+												<li data-filter=".macarons" id="list6" style="display:none">Macarons &#x1F95A;</li>
+												<li data-filter=".special" id="list7" style="display:none">The Capricious Cook Specials</li>
+												<a id="next" onclick="nextItem();" style="cursor:pointer">▶</a>
                     </ul>
      
                     <div class="filters-content">
@@ -257,13 +260,14 @@
 															</div>	                          
 													</div>
 													<div class="col-lg-4 col-md-6 col-sm-6 all ccupcakes">
-														<div class="single-gallery">
-															<img class="img-fluid" src="food_gallery/Brownie Bars.jpg" alt="">
-															<div class="image-label">
-																	<h4>Brownie Bars</h4>
-															</div>
-														</div>	                          
-												</div>
+															<div class="single-gallery">
+																<img class="img-fluid" src="food_gallery/Butterscotch Cake.jpg" alt="">
+																<div class="image-label">
+																		<h4>Butterscotch Cake</h4>
+																</div>
+															</div>	                          
+													</div>
+													
 														<!--End Cakes And Cupcakes Images-->
 
 														<!--Start Cheesecakes Images-->
@@ -391,13 +395,13 @@
 																</div>	                          
 														</div>
 														<div class="col-lg-4 col-md-6 col-sm-6 all cookies">
-															<div class="single-gallery">
-																<img class="img-fluid" src="food_gallery/Chocolate Chip.jpg" alt="">
-																<div class="image-label">
-																		<h4>Chocolate Chip Cookies</h4>
-																</div>
-															</div>	                          
-													</div>
+																<div class="single-gallery">
+																	<img class="img-fluid" src="food_gallery/Chocolate Chip.jpg" alt="">
+																	<div class="image-label">
+																			<h4>Chocolate Chip Cookies</h4>
+																	</div>
+																</div>	                          
+														</div>
 														<!--End Cookies Images-->
 
 														<!--Start Cake Pops Images-->
@@ -447,6 +451,25 @@
 																</div>	                          
 														</div>
 														<!--End Macarons Images-->
+
+														<!--Start Capricious Cook Special-->
+														<div class="col-lg-4 col-md-6 col-sm-6 all special">
+																<div class="single-gallery">
+																	<img class="img-fluid" src="food_gallery/Brownie Bars.jpg" alt="">
+																	<div class="image-label">
+																			<h4>Brownie Bars</h4>
+																	</div>
+																</div>	                          
+														</div>
+														<div class="col-lg-4 col-md-6 col-sm-6 all special">
+																<div class="single-gallery">
+																	<img class="img-fluid" src="food_gallery/Baklava.jpg" alt="">
+																	<div class="image-label">
+																			<h4>Baklava</h4>
+																	</div>
+																</div>	                          
+														</div>
+														<!--End Capricious Cook Special-->
                         </div>
                     </div>
                     
@@ -501,8 +524,45 @@
 			<script src="js/mail-script.js"></script>	
 			<script src="js/main.js"></script>
 			<script>
+				var start = 1;
+				var itemname = "";
+				var initial =document.getElementById('list1').innerHTML;
+				var last = document.getElementById('list7').innerHTML;
+					function previousItem(){
+						start = start - 1;
+						if(start <= 1){
+								document.getElementById('list1').innerHTML= initial;
+								document.getElementById('list1').click();
+								start = 1;
+						}
+						else{
+							itemname = document.getElementById('list'+start).innerHTML;
+							document.getElementById('list1').innerHTML= itemname;
+							document.getElementById('list'+ start).click();
+							document.getElementById('list1').style.backgroundColor = "#f42f2c";
+							document.getElementById('list1').style.color = "#fff";
+						}
+					}
+
+					function nextItem(){
+						start = start + 1;
+						if(start >= 7){
+							document.getElementById('list1').innerHTML= last;
+							document.getElementById('list7').click();
+							start = 7;
+						}
+						else
+						{
+							itemname = document.getElementById('list'+start).innerHTML;
+							document.getElementById('list1').innerHTML= itemname;
+							document.getElementById('list'+ start).click();
+							document.getElementById('list1').style.backgroundColor = "#f42f2c";
+							document.getElementById('list1').style.color = "#fff";
+
+						}
+					}
 				function listcall(){
-					document.getElementById('ccakes').click();
+					document.getElementById('list1').click();
 				}
 			</script>	
 			
