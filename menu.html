@@ -140,10 +140,10 @@
 						</div>
 					</div>	
 					<!-- &#x1F95A; -->
-					
+					<div id="block1">
                     <ul class="filter-wrap filters col-lg-12 no-padding">
 						<a id="previous" onclick="previousItem();" style="cursor:pointer">◀</a>
-                        <li data-filter=".ccupcakes" id="list1">Cakes & Cupcakes</li>
+                        <li data-filter=".ccupcakes" id="list1">Cakes And Cupcakes</li>
                         <li data-filter=".cheesecakes" id="list2" style="display:none">Cheesecakes</li>
 						<li data-filter=".cookies" id="list3" style="display:none">Cookies </li>
 						<li data-filter=".nocookies" id="list4" style="display:none">No Sugar Cookies </li>
@@ -153,7 +153,33 @@
 						<li data-filter=".special" id="list8" style="display:none">The Capricious Cook Specials</li>
 						<a id="next" onclick="nextItem();" style="cursor:pointer">▶</a>
                     </ul>
-                    
+					</div>
+
+					<!-- <div id="block2" class="dropdown" style="text-align:center">
+							<button type="button" class="btn primary-btn dropdown-toggle" data-toggle="dropdown">
+									Categories
+							</button>
+							<div class="dropdown-menu" style="text-align:center">
+									<ul class="filter-wrap filters">
+											<a class="dropdown-item"><li data-filter=".ccupcakes" id="list1">Cakes & Cupcakes</li></a>
+											<a class="dropdown-item"><li data-filter=".cheesecakes">Cheesecakes</li></a>
+											<a class="dropdown-item"><li data-filter=".cookies">Cookies </li></a>
+											<a class="dropdown-item"><li data-filter=".nocookies">No Sugar Cookies </li></a>
+											<a class="dropdown-item"><li data-filter=".cakepops" >Cake Pops</li></a>
+											<a class="dropdown-item"><li data-filter=".doughnuts" >Doughnuts</li></a>
+											<a class="dropdown-item"><li data-filter=".macarons" >Macarons &#x1F95A;</li></a>
+											<a class="dropdown-item"><li data-filter=".special" >The Capricious Cook Specials</li></a>
+									</ul>
+							</div>
+
+					</div> -->
+
+					<div id="block2" style="text-align: center">
+							<a class="primary-border circle" onclick="previousItem();">◀</a>&nbsp;&nbsp;
+							<a class="genric-btn primary circle arrow" id="smlist" style="color:#fff;">Cakes And Cupcakes</a>&nbsp;&nbsp;
+							<a class="primary-border circle" onclick="nextItem();">▶</a>
+					</div>
+
                     <div class="filters-content">
                         <div class="row grid">
 
@@ -1674,12 +1700,14 @@
 						start = start - 1;
 						if(start <= 1){
 								document.getElementById('list1').innerHTML= initial;
+								document.getElementById('smlist').text= initial;
 								document.getElementById('list1').click();
 								start = 1;
 						}
 						else{
 							itemname = document.getElementById('list'+start).innerHTML;
 							document.getElementById('list1').innerHTML= itemname;
+							document.getElementById('smlist').text= itemname;
 							document.getElementById('list'+ start).click();
 							document.getElementById('list1').style.backgroundColor = "#f42f2c";
 							document.getElementById('list1').style.color = "#fff";
@@ -1690,6 +1718,7 @@
 						start = start + 1;
 						if(start >= 8){
 							document.getElementById('list1').innerHTML= last;
+							document.getElementById('smlist').text= last;
 							document.getElementById('list8').click();
 							start = 8;
 						}
@@ -1697,6 +1726,7 @@
 						{
 							itemname = document.getElementById('list'+start).innerHTML;
 							document.getElementById('list1').innerHTML= itemname;
+							document.getElementById('smlist').text= itemname;
 							document.getElementById('list'+ start).click();
 							document.getElementById('list1').style.backgroundColor = "#f42f2c";
 							document.getElementById('list1').style.color = "#fff";
@@ -1704,8 +1734,36 @@
 						}
 					}
 				function listcall(){
-					document.getElementById('list1').click();
+					if(window.matchMedia("(max-width: 414px)").matches){
+						document.getElementById("block1").style.display="none";
+						document.getElementById("block2").style.display="block";
+						document.getElementById('list1').click();
+					}
+					else
+					{
+						document.getElementById("block1").style.display="block";
+						document.getElementById("block2").style.display="none";
+						document.getElementById('list1').click();
+					}
 				}
+				$(window).resize(function(){
+					var p = document.getElementById("previous");
+					var n = document.getElementById("next");
+					if (window.matchMedia("(max-width: 414px)").matches) {
+    						p.style.display = "none";
+							n.style.display = "none";
+							document.getElementById("block1").style.display="none";
+							document.getElementById("block2").style.display="block";
+
+					}
+					else{
+						p.style.display = "block";
+						n.style.display = "block";
+						document.getElementById("block1").style.display="block";
+						document.getElementById("block2").style.display="none";
+
+					}
+				});
 			</script>
 			
 		</body>
