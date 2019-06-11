@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+<head>
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/logo.png">
+    <!-- Author Meta -->
+    <meta name="author" content="colorlib">
+    <!-- Meta Description -->
+    <meta name="description" content="">
+    <!-- Meta Keyword -->
+    <meta name="keywords" content="">
+    <!-- meta character set -->
+    <meta charset="UTF-8">
+    <!-- Site Title -->
+    <title>The Capricious Cook</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+        <!--
+        CSS
+        ============================================= -->
+        <link rel="stylesheet" href="css/linearicons.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/magnific-popup.css">
+        <link rel="stylesheet" href="css/jquery-ui.css">				
+        <link rel="stylesheet" href="css/nice-select.css">							
+        <link rel="stylesheet" href="css/animate.min.css">
+        <link rel="stylesheet" href="css/owl.carousel.css">				
+        <link rel="stylesheet" href="css/main.css">
+        <style>
+                .checked {
+                   color: orange;
+    
+                }
+                .crunchify-top:hover {
+                    color: #fff !important;
+                    background-color: black;
+                    text-decoration: none;
+                }
+                 
+                .crunchify-top {
+                    display: none;
+                    position: fixed;
+                    bottom: 1rem;
+                    right: 1rem;
+                    width: 3.2rem;
+                    height: 3.2rem;
+                    line-height: 3.2rem;
+                    font-size: 1.4rem;
+                    color: #fff;
+                    background-color: rgba(0,0,0,0.3);
+                    text-decoration: none;
+                    border-radius: 3.2rem;
+                    text-align: center;
+                    cursor: pointer;
+                }
+        </style>
+        <script type=”text/javascript” src=”//cdn.jsdelivr.net/afterglow/latest/afterglow.min.js”></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+        <script>            
+                    jQuery(document).ready(function() {
+                        var offset = 220;
+                        var duration = 500;
+                        jQuery(window).scroll(function() {
+                            if (jQuery(this).scrollTop() > offset) {
+                                jQuery('.crunchify-top').fadeIn(duration);
+                            } else {
+                                jQuery('.crunchify-top').fadeOut(duration);
+                            }
+                        });
+                 
+                        jQuery('.crunchify-top').click(function(event) {
+                            event.preventDefault();
+                            jQuery('html, body').animate({scrollTop: 0}, duration);
+                            return false;
+                        })
+                    });
+        </script>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138686626-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-138686626-1');
+        </script>
+        
+    </head>
+    <body>	
+        <header id="header">
+            <div class="header-top">
+                <div class="container">
+                      <div class="row justify-content-center">
+                          <div id="logo">
+                            <a href="index.html"><img src="img/logo.png" alt="" title="" /></a>
+                          </div>
+                      </div>			  					
+                </div>
+            </div>
+            <div class="container main-menu">
+                <div class="row align-items-center justify-content-center d-flex">			
+                  <nav id="nav-menu-container">
+                    <ul class="nav-menu">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="menu.html">Menu</a></li>		
+                                <li><a href="gallery.html">Gallery</a></li>		          					          		          
+                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="feedback.html">Feedback</a></li>
+                    </ul>
+                  </nav><!-- #nav-menu-container -->					      		  
+                </div>
+            </div>
+        </header><!-- #header -->
+        
+        <!-- start banner Area -->
+        <section class="about-banner relative">
+            <div class="overlay overlay-bg"></div>
+            <div class="container">				
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div class="about-content col-lg-12">
+                        <h1 class="text-white">
+                            Feedback				
+                        </h1>	
+                    </div>	
+                </div>
+            </div>
+        </section>
+        <!-- End banner Area -->	
+
+        <!-- Start Feedback Form -->
+        <section class="home-about-area section-gap">
+                <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                        <iframe style="display: none" name="hidden-form"></iframe>
+                        <form class="text-center" action="https://docs.google.com/forms/d/e/1FAIpQLScHQ-ImNdMP4eD68P9uj9T1q3ebGtTS0Bs79QHleCeLBqqdBg/formResponse" method="POST" target="hidden-form" onsubmit="confirmation()">
+                                <input type="text" name="entry.800814621" class="form-control mb-4" placeholder="Full Name" required>
+                                <input type="email" name="entry.1294372767" class="form-control mb-4" placeholder="E-mail" required>
+                                <input type="number" name="entry.1169732097" id="tasterate" hidden>
+                                <input type="number" name="entry.597117125" id="appearancerate" hidden>
+                                <textarea name="entry.1795247773" class="form-control rounded-3" rows="3" placeholder="Comments" required></textarea>
+                                <br/>
+                                <div class="row justify-content-center">
+                                        <div class="col">
+                                            <h4>Taste</h4>
+                                            <span  onclick="starmark1(this)" id="1one"  style="font-size:25px;cursor:pointer;" class="fa fa-star"></span>
+                                            <span  onclick="starmark1(this)" id="2one"  style="font-size:25px;cursor:pointer;" class="fa fa-star "></span>
+                                            <span  onclick="starmark1(this)" id="3one"  style="font-size:25px;cursor:pointer;" class="fa fa-star "></span>
+                                            <span  onclick="starmark1(this)" id="4one"  style="font-size:25px;cursor:pointer;" class="fa fa-star"></span>
+                                            <span  onclick="starmark1(this)" id="5one"  style="font-size:25px;cursor:pointer;" class="fa fa-star"></span>
+                                        </div>
+                                        <div class="col">
+                                            <h4>Appearance</h4>
+                                            <span  onclick="starmark2(this)" id="1two"  style="font-size:25px;cursor:pointer;" class="fa fa-star"></span>
+                                            <span  onclick="starmark2(this)" id="2two"  style="font-size:25px;cursor:pointer;" class="fa fa-star "></span>
+                                            <span  onclick="starmark2(this)" id="3two"  style="font-size:25px;cursor:pointer;" class="fa fa-star "></span>
+                                            <span  onclick="starmark2(this)" id="4two"  style="font-size:25px;cursor:pointer;" class="fa fa-star"></span>
+                                            <span  onclick="starmark2(this)" id="5two"  style="font-size:25px;cursor:pointer;" class="fa fa-star"></span>
+                                        </div>        
+                                </div>
+                                <br/><br/>
+                                <button class="primary-btn" type="submit">Send</button>    
+                        </form>  
+                </div>
+            </div>
+        </section>
+        <!-- End Feedback Form -->	
+
+        <!-- start footer Area -->		
+        <footer class="footer-area">
+                <div class="footer-widget-wrap">
+                    <div class="container">
+                        <div class="row section-gap">
+                            <div class="col-lg-6  col-md-6 col-sm-6">
+                                <div class="single-footer-widget">
+                                    <h4>Contact Us</h4>
+                                    <h3>Shreya Patel</h3>
+                                    <p>
+                                            Email Id : thecapriciouscook@gmail.com<br>
+                                            Phone No. : <a href="tel:+919428403981" style="color:white">+91 9428403981</a> <br>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6  col-md-6 col-sm-6">
+                                    <div class="single-footer-widget">
+                                        <h4>Follow Us </h4>
+                                        <h3>Shreya Patel</h3>
+                                        <p>
+                                            Instagram : <a href="https://www.instagram.com/thecapriciouscook/" style="color:white">thecapriciouscook</a>
+                                        </p>
+                                    </div>
+                                </div>		
+                        </div>
+                    </div>
+                </div>		
+                <a href="#" class="crunchify-top">↑</a>				
+            </footer>
+        <!-- End footer Area -->	
+
+        <script src="js/vendor/jquery-2.2.4.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>			
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>		
+        <script src="js/jquery-ui.js"></script>					
+        <script src="js/easing.min.js"></script>			
+        <script src="js/hoverIntent.js"></script>
+        <script src="js/superfish.min.js"></script>	
+        <script src="js/jquery.ajaxchimp.min.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>						
+        <script src="js/jquery.nice-select.min.js"></script>					
+        <script src="js/owl.carousel.min.js"></script>			
+        <script src="js/isotope.pkgd.min.js"></script>								
+        <script src="js/mail-script.js"></script>	
+        <script src="js/main.js"></script>	
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script>
+        function starmark1(item)
+        {
+            count=item.id[0];
+            document.getElementById('tasterate').value = count;
+            //sessionStorage.setItem('Taste',count);
+            var subid= item.id.substring(1);
+            for(var i=0;i<5;i++)
+            {
+                if(i<count)
+                {
+                    document.getElementById((i+1)+subid).style.color="orange";
+                }
+                else
+                {
+                    document.getElementById((i+1)+subid).style.color="black";
+                }
+            }
+        }
+        function starmark2(item)
+        {
+            count=item.id[0];
+            document.getElementById('appearancerate').value = count;
+           // sessionStorage.setItem('Appearance',count);
+            var subid= item.id.substring(1);
+            for(var i=0;i<5;i++)
+            {
+                if(i<count)
+                {
+                    document.getElementById((i+1)+subid).style.color="orange";
+                }
+                else
+                {
+                    document.getElementById((i+1)+subid).style.color="black";
+                }
+            }
+        }
+        </script>
+        <script>
+                function confirmation(){
+                    swal("Thank You", "Feedback Was Submitted Successfully!!", "success");
+                    setTimeout(function(){
+                        window.location.href = 'http://www.thecapriciouscook.tk';
+                    }, 5000);
+                }
+        </script>
+    </body>
+</html>
