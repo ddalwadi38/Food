@@ -90,7 +90,7 @@
         </script>
         
     </head>
-    <body>	
+    <body onload="feedbackReview()">	
         <header id="header">
             <div class="header-top">
                 <div class="container">
@@ -169,6 +169,19 @@
             </div>
         </section>
         <!-- End Feedback Form -->	
+
+        <!--Start Feedback From People-->
+        <section class="menu-area section-gap">
+            <div style="text-align: center">
+                <h3>Customer Speak</h3>
+            </div>
+            <div class="container">
+                <div class="row grid" id="reviews">
+
+                </div>
+            </div>
+        </section>
+        <!--End Feedback From People-->
 
         <!-- start footer Area -->		
         <footer class="footer-area">
@@ -261,6 +274,28 @@
                     setTimeout(function(){
                         window.location.href = 'http://www.thecapriciouscook.tk';
                     }, 5000);
+                }
+        </script>
+        <script>
+                function feedbackReview(){
+                    $.ajax({
+                        url: "http://gsx2json.com/api?id=1uCx9QqInZB5fjETWookKS-uogfi3XnZgXZB5ZvMepEY&columns=false",
+                        dataType: "json",
+                        type: "GET",
+                        contentType: "application/json",
+                        success: function (result) {
+                            var feedback = "";
+                            var temp = "";
+                            for(var i=result.rows.length-1;i>=0;i--){
+                                temp = "<div class='col-md-6 all'><div class='single-menu'><div class='title-wrap d-flex justify-content-between'><h4>"+result.rows[i].fullname+"</h4></div><p>"+result.rows[i].comments+"</p></div></div>";
+                                feedback = feedback + temp;
+                            }
+                            document.getElementById("reviews").innerHTML = feedback;
+                        },
+                        error: function (error) {
+                            console.log(error + "error");
+                        }
+                    });
                 }
         </script>
     </body>
