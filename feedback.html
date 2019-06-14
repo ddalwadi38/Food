@@ -286,9 +286,31 @@
                         success: function (result) {
                             var feedback = "";
                             var temp = "";
+                            var tvalue = "";
+                            var avalue = "";
                             for(var i=result.rows.length-1;i>=0;i--){
-                                temp = "<div class='col-md-6 all'><div class='single-menu'><div class='title-wrap d-flex justify-content-between'><h4>"+result.rows[i].fullname+"</h4></div><p>"+result.rows[i].comments+"</p></div></div>";
+                                var tastevalue = result.rows[i].taste;
+                                for(var j=1;j<=5;j++){
+                                    if(j<=tastevalue){
+                                        tvalue = tvalue + "<span style='font-size:25px;color:orange' class='fa fa-star' checked></span>";
+                                    }
+                                    else{
+                                        tvalue = tvalue + "<span style='font-size:25px;color:black' class='fa fa-star'></span>";
+                                    }
+                                }
+                                var appearancevalue = result.rows[i].appearance;
+                                for(var j=1;j<=5;j++){
+                                    if(j<=appearancevalue){
+                                        avalue = avalue + "<span style='font-size:25px;color:orange' class='fa fa-star' checked></span>";
+                                    }
+                                    else{
+                                        avalue = avalue + "<span style='font-size:25px;color:black' class='fa fa-star'></span>";
+                                    }
+                                }
+                                temp = "<div class='col-md-6 all'><div class='single-menu'><div class='title-wrap d-flex justify-content-between'><h4>"+result.rows[i].fullname+"</h4></div><p>"+result.rows[i].comments+"</p></br><p><div class='row' style='text-align:center'><div class='col'><h5>Taste</h5>"+tvalue+"</div><div class='col'><h5>Appearance</h5>"+avalue+"</div></div></p></div></div>";
                                 feedback = feedback + temp;
+                                tvalue = "";
+                                avalue = "";
                             }
                             document.getElementById("reviews").innerHTML = feedback;
                         },
